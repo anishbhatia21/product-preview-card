@@ -1,0 +1,131 @@
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+  font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    background-color: hsl(30, 38%, 92%);
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+}
+
+.card{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: white;
+    max-width: 600px;
+    border-radius: 8px;
+    box-shadow: 0 0 25px rgba(0, 0, 10, 0.1);
+    margin: 1em;
+    overflow: hidden;
+}
+
+.main-image img{
+   height: 100%;
+   object-fit: cover;
+}
+
+.content{
+    padding: 24px;
+    display: grid;
+    gap: 24px;
+}
+
+.product{
+    letter-spacing: 8px;
+    color: hsl(228, 12%, 48%);
+    font-size: 0.7rem;
+}
+
+h1{
+    font-family: 'Fraunces', serif;
+    color: hsl(212, 21%, 14%);
+    line-height: 2rem;
+}
+
+.disc{
+    font-size: 0.85rem;
+    color: hsl(228, 12%, 48%);
+    line-height: 1.2rem;
+}
+
+.pricing{
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.price{
+    font-size: 2rem;
+    font-family: 'Fraunces', serif;
+    color: hsl(158, 36%, 37%);
+}
+
+.striked{
+    text-decoration: line-through;
+    color: hsl(228, 12%, 48%);
+}
+
+button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    width: 100%;
+    border: none;
+    background-color: hsl(158, 36%, 37%);
+    color: white;
+    font-weight: 700;
+    padding: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: hsl(158, 65%, 17%);
+}
+
+@media screen and (max-width: 450px) {
+    .card{
+        grid-template-columns: 1fr;
+    }
+}
